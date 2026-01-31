@@ -1,0 +1,85 @@
+Intermediate/*# ===============================
+# Unreal Engine 5
+# ===============================
+
+# Build artifacts
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Unreal Engine project files
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# Unreal Engine temp files
+*.tmp
+*.log
+*.pdb
+*.exp
+*.obj
+*.idb
+*.tlog
+
+# Crash reports
+*.dmp
+crashinfo--*
+
+# ===============================
+# IDE / Editor files
+# ===============================
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Rider for Unreal
+.idea/
+*.ipr
+*.iws
+*.iml
+
+# Xcode
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+
+# ===============================
+# OS-specific
+# ===============================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ===============================
+# Packaging / Distribution
+# ===============================
+
+# Cooked content
+Saved/Cooked/
+Saved/StagedBuilds/
+
+# ===============================
+# Optional (comment out if needed)
+# ===============================
+
+# Ignore all auto-generated config (keep Default*.ini)
+# Config/*.ini
+# !Config/Default*.ini
+
+# Ignore Unreal autosaves
+Saved/Autosaves/
+Saved/Backup/
