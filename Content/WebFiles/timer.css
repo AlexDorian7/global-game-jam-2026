@@ -1,0 +1,39 @@
+body {
+    background-color: transparent; /* Mandatory for transparent HUD */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align into position */
+    height: 100vh;
+}
+
+#timer-container {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent backing */
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+
+#timer-text {
+    font-size: 64px;
+    font-weight: bold;
+    color: white; /* Default color, can be overridden by JS */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: color 0.5s ease-in-out;
+}
+
+/* Classes for state changes */
+.critical {
+    color: red !important;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
