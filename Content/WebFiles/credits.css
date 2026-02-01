@@ -1,0 +1,104 @@
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Hide scrollbars */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Start from bottom */
+}
+
+.credits-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* will-change helps the browser optimize rendering */
+    will-change: transform;
+}
+
+.scroll-content {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    /* Increased duration to 45s to accommodate new content */
+    animation: scrollUp 45s linear infinite;
+}
+
+@keyframes scrollUp {
+    0% {
+        /* Start completely below the viewport */
+        transform: translateY(100vh);
+    }
+
+    100% {
+        /* Move completely above the viewport (based on own height) */
+        transform: translateY(-100%);
+    }
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 100px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    /* Requested Style: Dark Silver + Crimson Outline + Bevel */
+    color: #A9A9A9;
+    /* Dark Silver */
+    -webkit-text-stroke: 2px crimson;
+    text-shadow:
+        3px 3px 0px #000,
+        /* Deep Drop Shadow */
+        -1px -1px 0 #555,
+        /* Light Bevel Top-Left */
+        1px 1px 0 #333;
+    /* Dark Bevel Bottom-Right */
+}
+
+h2 {
+    font-size: 3em;
+    margin-top: 100px;
+    color: #A9A9A9;
+    -webkit-text-stroke: 1px crimson;
+    text-shadow: 2px 2px 4px black;
+}
+
+.credit-block {
+    margin-bottom: 80px;
+}
+
+.role {
+    font-size: 1.5em;
+    color: #888;
+    /* Slightly dimmer for role */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.name {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    /* Requested Style: Dark Silver + Crimson Outline + Bevel */
+    color: #C0C0C0;
+    /* Silver */
+
+    /* Crimson Outline */
+    -webkit-text-stroke: 1.5px crimson;
+
+    /* Bevel and Shadow Effect */
+    text-shadow:
+        4px 4px 6px black,
+        /* Drop Shadow */
+        -1px -1px 1px #E0E0E0,
+        /* Light Highlight (Bevel Up) */
+        1px 1px 1px #505050;
+    /* Dark Shadow (Bevel Down) */
+}
