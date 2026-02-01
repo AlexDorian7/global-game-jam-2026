@@ -1,0 +1,85 @@
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    /* Narrow for readability logic */
+    height: 100%;
+    perspective: 400px;
+    /* 3D Depth */
+    position: relative;
+    /* Fade mask */
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.scroll-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    /* Centered */
+
+    /* 3D Transform Setup */
+    transform-origin: 50% 100%;
+    transform: rotateX(25deg);
+
+    /* Animation: Speed slowed by another 20% (16.5s) */
+    animation: crawl 16.5s linear forwards;
+    will-change: transform, top;
+}
+
+@keyframes crawl {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        /* Move WAY further up (-300%) to ensure it clears completely */
+        top: -300%;
+        /* Stay VISIBLE (Opacity 1). The mask-image handles the fade at the top edge. */
+        opacity: 1;
+    }
+}
+
+/* --- Typography --- */
+
+h1 {
+    font-size: 6em;
+    /* Very Large title */
+    margin-bottom: 80px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #A9A9A9;
+    -webkit-text-stroke: 2px crimson;
+    text-shadow: 3px 3px 0px #000, 1px 1px 0 #333;
+}
+
+p {
+    font-size: 4em;
+    /* Huge story font */
+    line-height: 1.6;
+    font-weight: bold;
+    color: #C0C0C0;
+    text-shadow: 2px 2px 4px black;
+    margin-bottom: 60px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    /* Requested Silver Outline */
+    -webkit-text-stroke: 1px #A0A0A0;
+}
